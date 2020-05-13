@@ -35,6 +35,12 @@ provider:
         - dynamodb:DeleteItem
       Resource: 'arn:aws:cognito-idp:us-east-1:040556066795:userpool/us-east-1_gT8FPoNPp'
 
+    - Effect: Allow
+      Action:
+        - dynamodb:Query
+        - dynamodb:Scan
+      Resource: 'arn:aws:cognito-idp:us-east-1:040556066795:userpool/us-east-1_gT8FPoNPp'
+
 functions:
   # Defines an HTTP API endpoint that calls the main function in create.js
   # - path: url path is /notes
